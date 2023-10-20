@@ -1,27 +1,45 @@
 [
     {
       "name": "Cocacola",
-      "image": "https://i.ibb.co/fDC6b71/coca-cola-logo-popular-drink-brand-logo-free-vector-removebg-preview-1.png"
+      "image": "https://i.ibb.co/fDC6b71/coca-cola-logo-popular-drink-brand-logo-free-vector-removebg-preview-1.png",
+      "slider1":"https://i.ibb.co/hZsJTvX/Fanta-Background-No-Text.png",
+      "slider2":"https://i.ibb.co/HtNd32q/maxresdefault-545.jpg",
+      "slider3":"https://i.ibb.co/JFFw2MP/2afc0ebc2a13c7132a21889e2bb0c0b9.jpg"
     },
     {
       "name": "mcdonald",
-      "image": "https://i.ibb.co/ccJ7vBK/Untitled-1-removebg-preview.png"
+      "image": "https://i.ibb.co/ccJ7vBK/Untitled-1-removebg-preview.png",
+      "slider1":"https://i.ibb.co/7b5g0CF/bites-from-Mc-Donalds.jpg",
+      "slider2":"https://i.ibb.co/3NHpJC8/mcdonalds-big-mac-sauce-promo.jpg",
+      "slider3":"https://i.ibb.co/m0GZyzm/Mc-Donalds-for-case-study.jpg"
     },
     {
       "name": "Starbucks",
-      "image": "https://i.ibb.co/Z8Ftd6D/Starbucks-logo.png"
+      "image": "https://i.ibb.co/Z8Ftd6D/Starbucks-logo.png",
+      "slider1":"https://i.ibb.co/V32xtBB/Starbucks-Cold-Drinks-Promo-Get-50-Off-Boat-Basin-Cafe.jpg",
+      "slider2":"https://i.ibb.co/j6ddyGG/Starbucks-Featured-Image.jpg",
+      "slider3":"https://i.ibb.co/YB5J7PB/Starbucks-18-Off-Promo-1200x660-1-700x385.jpg"
     },
     {
       "name": "PepsiCo",
-      "image": "https://i.ibb.co/2j218K9/png-clipart-multicolored-globe-art-pepsico-fizzy-drinks-logo-pepsi-company-logo-removebg-preview.png"
+      "image": "https://i.ibb.co/2j218K9/png-clipart-multicolored-globe-art-pepsico-fizzy-drinks-logo-pepsi-company-logo-removebg-preview.png",
+      "slider1":"https://i.ibb.co/vYsjMqC/Pepsi-Co-seeks-to-exploit-shift-to-home-cooking-and-immunity-focus-among-comfort-craving-consumers.jpg",
+      "slider2":"https://i.ibb.co/jvBShZM/Top.png",
+      "slider3":"https://i.ibb.co/tP7qhS6/pepsi-logo.jpg"
     },
     {
       "name": "Nestlé",
-      "image": "https://i.ibb.co/86FJd9S/Untitled-3-removebg-preview.png"
+      "image": "https://i.ibb.co/86FJd9S/Untitled-3-removebg-preview.png",
+      "slider1":"https://i.ibb.co/413wF0f/maxresdefault-54.jpg",
+      "slider2":"https://i.ibb.co/vkqSngW/69c5c96fde9a4891f9e09b8678599240.jpg",
+      "slider3":"https://i.ibb.co/x7PM7jZ/promo-ganhei-720x400.jpg"
     },
     {
       "name": "Pran",
-      "image": "https://i.ibb.co/mqcgFHb/pran-png-removebg-preview.png"
+      "image": "https://i.ibb.co/mqcgFHb/pran-png-removebg-preview.png",
+      "slider1":"https://i.ibb.co/GxTgv4p/lacchi-new-kv-web-design-1920x900-a-0.jpg",
+      "slider2":"https://i.ibb.co/vxD0K5L/Dairy-top-aug23-01-1.jpg",
+      "slider3":"https://i.ibb.co/Lh8dCww/pranup-new-kv-web-design-1920x900-c.jpg"
     }
   ]
   

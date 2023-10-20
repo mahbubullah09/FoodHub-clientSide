@@ -11,7 +11,7 @@ let user;
   console.log(navigate);
 
   const navLink = (
-    <div className=" gap-4 flex">
+    <div className=" gap-4 flex ">
       <ul className="py-1">
         <NavLink
           to="/"
@@ -75,7 +75,7 @@ let user;
 
   return (
     <div>
-      <div className="navbar Montserrat font-semibold  ">
+      <div className="navbar Montserrat font-semibold  max-w-6xl mx-auto  ">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">

@@ -102,7 +102,7 @@ let user;
             </ul>
           </div>
           <img
-            className="w-1/4"
+            className="w-1/3"
             src="https://i.ibb.co/bBvd24r/Black-and-White-Monogram-Business-Logo-1-c-removebg-preview.png"
             alt=""
           />

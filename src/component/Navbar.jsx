@@ -17,8 +17,8 @@ let user;
           to="/"
           className={({ isActive }) =>
             isActive
-              ? "text-white bg-blue-gray-50 bg-[#28844b] rounded-full py-2 px-4  "
-              : ""
+            ? " text-black bg-white rounded-full py-2 px-4 shadow-orange-600  "
+            : "bg-[#28844b] text-white rounded-full py-2 px-4 "
           }
         >
           {" "}
@@ -31,8 +31,8 @@ let user;
           to="/addproduct"
           className={({ isActive }) =>
             isActive
-              ? "text-white bg-blue-gray-50 bg-[#28844b] rounded-full py-2 px-4  "
-              : ""
+            ? " text-black bg-white rounded-full py-2 px-4  "
+            : "bg-[#28844b] text-white rounded-full py-2 px-4 "
           }
         >
           {" "}
@@ -45,8 +45,8 @@ let user;
           to="/mycart"
           className={({ isActive }) =>
             isActive
-              ? "text-white bg-blue-gray-50 bg-[#28844b] rounded-full py-2 px-4  "
-              : ""
+              ? " text-black bg-white rounded-full py-2 px-4  "
+              : "bg-[#28844b] text-white rounded-full py-2 px-4 "
           }
         >
           {" "}
@@ -107,8 +107,8 @@ let user;
             alt=""
           />
         </div>
-        <div className="navbar-center hidden lg:flex bg-[#9dd51f] rounded-full">
-          <ul className="menu menu-horizontal px-4">{navLink}</ul>
+        <div className="navbar-center hidden lg:flex bg-[#9dd51f]  rounded-full">
+          <ul className="menu menu-horizontal px-4 ">{navLink}</ul>
         </div>
         <div className="navbar-end">
           {user?.email ? (
@@ -130,7 +130,7 @@ let user;
               </Link>
             </div>
           ) : (
-            <Link to={"login"}>Log In</Link>
+            <Link to={"login"} className="bg-[#28844b] text-white hover:text-black hover:bg-[#9dd51f] py-2 px-4 rounded" >Log In</Link>
           )}
         </div>
       </div>

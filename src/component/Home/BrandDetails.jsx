@@ -1,9 +1,15 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import productsDetails from '../fakeData.json'
+import Slider from "./Slider";
+import ProductsCard from "./ProductsCard";
 
 const BrandDetails = () => {
+   
   const { name } = useParams();
   const data = useLoaderData();
+  const [cardData, setCardData] = useState();
+  console.log(cardData);
 
   const [brand, setBrand] = useState();
   console.log(brand);
@@ -11,61 +17,30 @@ const BrandDetails = () => {
   useEffect(() => {
     const findData = data?.find((brand) => brand.name == name);
     setBrand(findData);
+
+    const CData= productsDetails?.filter((data)=> data.Brand_Name == name )
+  
+    setCardData(CData);
   }, [name, data]);
 
-  console.log(data, name);
+  console.log(cardData);
+
+ 
   return (
-    <div>
-      <div className="mx-auto px-6   lg:block max-w-6xl  relative ">
-        <div className="carousel  ">
-          <div
-            id="slide1"
-            className="carousel-item relative w-full  bg-gray-700 "
-          >
-            <img src={brand?.slider1} className="lg:block w-full h-[70vh] " />
-            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-              <a href="#slide3" className="text-white p-8  my-auto">
-                ❮
-              </a>
-
-              <a href="#slide2" className=" text-white p-8 my-auto">
-                ❯
-              </a>
-            </div>
-          </div>
-          <div
-            id="slide2"
-            className="carousel-item relative w-full  bg-gray-700  "
-          >
-            <img src={brand?.slider2} className="lg:block w-full h-[70vh] " />
-            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-              <a href="#slide1" className="text-white p-8 my-auto">
-                ❮
-              </a>
-              <div></div>
-
-              <a href="#slide3" className="text-white p-8 my-auto">
-                ❯
-              </a>
-            </div>
-          </div>
-          <div
-            id="slide3"
-            className="carousel-item relative w-full  bg-gray-700"
-          >
-            <img src={brand?.slider3} className="lg:block w-full h-[70vh] " />
-            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-              <a href="#slide2" className="text-white p-8 my-auto">
-                ❮
-              </a>
-
-              <a href="#slide1" className=" text-white p-8  my-auto">
-                ❯
-              </a>
-            </div>
-          </div>
-        </div>
+    <div className="max-w-6xl mx-auto">
+      <div>
+        {
+           <Slider brand={brand}></Slider>
+        }
       </div>
+      <div className=" my-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mx-4">
+        {
+            cardData?.map((data)=> <ProductsCard key={data.id} data={data}></ProductsCard>)
+        }
+      </div>
+
+
+
     </div>
   );
 };

@@ -19,7 +19,7 @@ const Banner = ({brand}) => {
         </div>
       <div className="  my-8 static lg:my-0 lg:absolute -bottom-52 lg:-bottom-32 inset-x-14  align-middle max-w-5xl mx-auto">
           
-      <div className="bg-[#9dd51f]   rounded-full align-middle py-8   ">
+      <div className="bg-[#9dd51f]   rounded-full align-middle pb-8   ">
         <h4 className=" text-2xl  mb-4  text-black rounded-full w-44 px-4 py-2 border-black border-solid border-b-8   grid align-middle text-center mx-auto font-bold">Our Brand</h4>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4  lg:grid-cols-6 mx-4">
             {

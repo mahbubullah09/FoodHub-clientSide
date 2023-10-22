@@ -7,6 +7,7 @@ import Mainlayout from './assets/layout/Mainlayout';
 import Home from './component/Home/home';
 import BrandDetails from './component/Home/BrandDetails';
 import ProductDetails from './component/Home/ProductDetails';
+import AddProducts from './component/Add Products/AddProducts';
 
 
 const router = createBrowserRouter([
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/addproduct',
-        element:<h3>add product</h3>
+        element:<AddProducts/>
       },
       {
         path:'/mycart',

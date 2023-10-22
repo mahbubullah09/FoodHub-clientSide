@@ -6,6 +6,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Mainlayout from './assets/layout/Mainlayout';
 import Home from './component/Home/home';
 import BrandDetails from './component/Home/BrandDetails';
+import ProductDetails from './component/Home/ProductDetails';
 
 
 const router = createBrowserRouter([
@@ -19,9 +20,15 @@ const router = createBrowserRouter([
         loader: () => fetch('/brand.json')
       },
       {
-        path: '/brands/:name',
+        path: '/:name',
         element:<BrandDetails/>,
         loader: () => fetch('/brand.json')
+      },
+      {
+        path: '/:brand_name/:product_name',
+        element:<ProductDetails/>,
+        loader: () => fetch('./component/fakeData.json'),
+        
       },
       {
         path:'/addproduct',

@@ -15,6 +15,11 @@ const MyCart = () => {
 
     const [myCart, setMyCart] = useState([]);
     console.log(myCart);
+     const [noData, setNodata] = useState(true);
+     if(myCart.length > 0 ){
+        setNodata(false)
+     }
+     console.log(noData);
 
 
     useEffect(() => {
@@ -28,6 +33,12 @@ const MyCart = () => {
     return (
         <div>
             {
+                noData ? 
+                <div>
+                    <h3 className=" text-4xl text-black text-center  h-[30vh] my-[15vh]">No Data Found</h3>
+
+                </div>
+                :
                 myCart?.map((details) => <SingleCart key={details._id} details={details}/>)
             }
             

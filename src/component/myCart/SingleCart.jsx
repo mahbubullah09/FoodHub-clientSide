@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import Swal from "sweetalert2";
 
 const SingleCart = ({ details }) => {
+
+
+   
   const {
     _id,
     image,
@@ -11,6 +15,33 @@ const SingleCart = ({ details }) => {
     price,
     description,
   } = details;
+
+  const handleDelete = () => {
+    console.log(_id);
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/myCart/${_id}`,{
+            method: 'DELETE'
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            if (data.deletedCount > 0) {
+              Swal.fire("Deleted!", "Your file has been deleted.", "success");
+              window.location.reload();
+            }
+          });
+      }
+    });
+  };
 
   return (
     <div>
@@ -43,7 +74,10 @@ const SingleCart = ({ details }) => {
                     </div>
                   </div>
                 </div>
-                <button className="mt-3 sm:mt-0 py-2 px-5 md:py-3 md:px-6 bg-[#28844b] text-white  hover:text-black hover:bg-[#9dd51f] rounded-lg py-2 px-4 font-bold  md:text-lg  shadow-md">
+                <button
+                  onClick={handleDelete}
+                  className="mt-3 sm:mt-0 py-2 px-5 md:py-3 md:px-6 bg-[#28844b] text-white  hover:text-black hover:bg-[#9dd51f] rounded-lg py-2 px-4 font-bold  md:text-lg  shadow-md"
+                >
                   Delete
                 </button>
               </div>

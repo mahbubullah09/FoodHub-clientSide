@@ -8,7 +8,7 @@ const MyCart = () => {
 
     const { user } = useContext(AuthContext);
     console.log(user.email);
-    const email = user.email;
+    const email = user?.email;
 
     const DB = useLoaderData();
     console.log(DB);

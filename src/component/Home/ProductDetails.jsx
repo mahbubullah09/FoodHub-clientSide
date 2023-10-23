@@ -1,5 +1,4 @@
-import {  useParams } from "react-router-dom";
-import productsDetails from '../fakeData.json'
+import {  useLoaderData, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ProductsCard from "./ProductsCard";
 import DetailsCard from "./DetailsCard";
@@ -8,6 +7,8 @@ import DetailsCard from "./DetailsCard";
 
 const ProductDetails = () => {
 
+    const  productsDetails = useLoaderData();
+
 
     const [product,SetProduct] = useState([]);
 
@@ -15,14 +16,14 @@ const ProductDetails = () => {
     console.log(productsDetails);
     useEffect(() => {
 
-        const findData = productsDetails.find((data) =>  data.Name == name.product_name )
+        const findData = productsDetails.find((data) =>  data.product == name.product_name )
         SetProduct(findData);
-    },[name])
+    },[productsDetails,name.product_name])
   
     return (
         <div>
           {
-           <DetailsCard product ={product}/>
+           <DetailsCard item ={product}/>
           }
         </div>
     );

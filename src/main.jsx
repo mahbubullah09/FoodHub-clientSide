@@ -41,7 +41,7 @@ const router = createBrowserRouter([
       {
         path: '/:brand_name/:product_name',
         element:<ProductDetails/>,
-        loader: () => fetch('./component/fakeData.json'),
+        loader: () => fetch('http://localhost:5000/products'),
         
       },
       {

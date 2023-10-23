@@ -1,8 +1,9 @@
 import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { AuthContext } from "../../../Provider/authProvider";
+
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../Provider/authProvider";
 
 
 const SocialLogin = () => {

@@ -2,8 +2,9 @@
 import SocialLogin from "./SocialLogin";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext } from "react";
-import { AuthContext } from "../../../Provider/authProvider";
+
 import toast from "react-hot-toast";
+import { AuthContext } from "../../Provider/authProvider";
 
 const Login = () => {
     const location = useLocation();

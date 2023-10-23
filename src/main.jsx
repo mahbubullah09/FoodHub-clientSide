@@ -8,6 +8,10 @@ import Home from './component/Home/home';
 import BrandDetails from './component/Home/BrandDetails';
 import ProductDetails from './component/Home/ProductDetails';
 import AddProducts from './component/Add Products/AddProducts';
+import Login from './component/registration/Login';
+import SingUp from './component/registration/SingUp';
+import AuthProvider from './Provider/authProvider';
+
 
 
 const router = createBrowserRouter([
@@ -19,6 +23,14 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home/>,
         loader: () => fetch('/brand.json')
+      },
+      {
+        path: "login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/singup",
+        element: <SingUp></SingUp>,
       },
       {
         path: '/:name',
@@ -45,6 +57,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-      <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router}> </RouterProvider>
+    </AuthProvider>
   </React.StrictMode>,
 )

@@ -1,11 +1,13 @@
 import { useContext } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-// import { AuthContext } from "../../Provider/authProvider";
+import { AuthContext } from "../Provider/authProvider";
+
+
 
 const Navbar = () => {
-//   const { user, logOut } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
 
-let user;
+
 
   const navigate = useNavigate()
   console.log(navigate);
@@ -111,26 +113,54 @@ let user;
           <ul className="menu menu-horizontal px-4 ">{navLink}</ul>
         </div>
         <div className="navbar-end">
-          {user?.email ? (
-            <div className="flex flex-col items-center">
-              <div className="w-9 rounded-full">
-                <img className="rounded-full" src={user.photoURL} alt="" />
-              </div>
-              <h2 className="mr-2">{user.displayName}</h2>
-            </div>
-          ) : (
-            ""
-          )}
+        {user?.email ? (
+           <div className="cursor-pointer mr-2">
+             <div className="dropdown dropdown-end ">
+              <label tabIndex={0} className="">
+                <div className="w-10 rounded-full">
+                  {user ? (
+                    <img className="rounded-full cursor-pointer" src={user?.photoURL} alt="" />
+                  ) : (
+                    <div className=" text-4xl">
+                      {" "}
+                      <BsPersonCircle></BsPersonCircle>
+                    </div>
+                  )}
+                </div>
+              </label>
+              <ul
+                tabIndex={0}
+                className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+              >
+                <li>
+                  <NavLink
+                    to="/profile"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "text-[#E76F51] text-base  font-extrabold border-b-8   "
+                        : " font-bold text-base"
+                    }
+                  >
+                    Profile
+                  </NavLink>
+                </li>
 
-          {user?.email ? (
-            <div>
-              <Link to={"login"}>
-                {" "}
-                <button onClick={logOut}>Log Out</button>
-              </Link>
+                {user ? (
+                  <li>
+                    <a>{user?.displayName}</a>
+                  </li>
+                ) : (
+                  ""
+                )}
+                <li>
+                  {" "}
+                  <button onClick={logOut}>Logout</button>
+                </li>
+              </ul>
             </div>
+           </div>
           ) : (
-            <Link to={"login"} className="bg-[#28844b] text-white hover:text-black hover:bg-[#9dd51f] py-2 px-4 rounded" >Log In</Link>
+            <div className=" text-base font-semibold hover:bg-[#9dd51f] hover:text-black bg-[#28844b] text-white  py-2 px-4 rounded-md hover:bg-blue-gray-800 "><Link to={"login"}>Log In</Link></div>
           )}
         </div>
       </div>

@@ -1,7 +1,9 @@
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { AuthContext } from "../../../Provider/authProvider";
+
 import toast from "react-hot-toast";
+import SocialLogin from "./SocialLogin";
+import { AuthContext } from "../../Provider/authProvider";
 
 const SingUp = () => {
   const { user, createUser, handleUpdateProfile } = useContext(AuthContext);
@@ -130,6 +132,7 @@ const SingUp = () => {
               Sign In
             </Link>
           </p>
+          <SocialLogin></SocialLogin>
         </div>
       </div>
     </div>

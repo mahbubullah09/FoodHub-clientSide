@@ -11,6 +11,7 @@ import AddProducts from './component/Add Products/AddProducts';
 import Login from './component/registration/Login';
 import SingUp from './component/registration/SingUp';
 import AuthProvider from './Provider/authProvider';
+import UpdateProduct from './component/Add Products/UpdateProduct';
 
 
 
@@ -41,6 +42,13 @@ const router = createBrowserRouter([
         path: '/:brand_name/:product_name',
         element:<ProductDetails/>,
         loader: () => fetch('./component/fakeData.json'),
+        
+      },
+      {
+        path: '/UpdateProduct/:id',
+        element:<UpdateProduct/>,
+        loader:({params})=> fetch(`http://localhost:5000/products/${params.id}`),
+        
         
       },
       {

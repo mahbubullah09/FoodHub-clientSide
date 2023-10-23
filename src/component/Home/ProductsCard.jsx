@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
+import UpdateProduct from "../Add Products/UpdateProduct";
 
 const ProductsCard = ({ data }) => {
-  const { image, product, brand_name, category, rating, price, description } =
+  const {_id, image, product, brand_name, category, rating, price, description } =
     data;
     console.log(data);
   return (
@@ -40,9 +41,12 @@ const ProductsCard = ({ data }) => {
                   Details
                 </button>
               </Link>
+              <Link to={`/UpdateProduct/${_id}`}>
               <button className="bg-[#28844b] text-white  hover:text-black hover:bg-[#9dd51f] rounded-full py-2 px-4">
                 Update
+                
               </button>
+              </Link>
             </div>
           </div>
         </div>

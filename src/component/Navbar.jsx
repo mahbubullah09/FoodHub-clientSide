@@ -2,14 +2,10 @@ import { useContext } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/authProvider";
 
-
-
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
 
-
-
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   console.log(navigate);
 
   const navLink = (
@@ -19,29 +15,29 @@ const Navbar = () => {
           to="/"
           className={({ isActive }) =>
             isActive
-            ? " text-black bg-white rounded-full py-2 px-4 shadow-orange-600  "
-            : "bg-[#28844b] text-white rounded-full py-2 px-4 "
+              ? " text-black bg-white rounded-full py-2 px-4 shadow-orange-600  "
+              : "bg-[#28844b] text-white rounded-full py-2 px-4 "
           }
         >
           {" "}
           Home
         </NavLink>
       </ul>
-      
+
       <ul className="py-1">
         <NavLink
           to="/addproduct"
           className={({ isActive }) =>
             isActive
-            ? " text-black bg-white rounded-full py-2 px-4  "
-            : "bg-[#28844b] text-white rounded-full py-2 px-4 "
+              ? " text-black bg-white rounded-full py-2 px-4  "
+              : "bg-[#28844b] text-white rounded-full py-2 px-4 "
           }
         >
           {" "}
-         Add Product
+          Add Product
         </NavLink>
       </ul>
-      
+
       <ul className="py-1">
         <NavLink
           to="/mycart"
@@ -52,26 +48,26 @@ const Navbar = () => {
           }
         >
           {" "}
-        My Cart
+          My Cart
         </NavLink>
       </ul>
-      
-    {
-      user?   <li>
-      <NavLink
-        to="/profile"
-        className={({ isActive }) =>
-          isActive
-            ? "text-black bg-blue-gray-50 font-extrabold border-b-8 border-[#E76F51] hover:font-bold "
-            : ""
-        }
-      >
-        Profile
-      </NavLink>
-    </li>
-    : ''
-    }
-   
+
+      {user ? (
+        <ul className="py-1">
+          <NavLink
+            to="/profile"
+            className={({ isActive }) =>
+              isActive
+                ? " text-black bg-white rounded-full py-2 px-4  "
+                : "bg-[#28844b] text-white rounded-full py-2 px-4 "
+            }
+          >
+            Profile
+          </NavLink>
+        </ul>
+      ) : (
+        ""
+      )}
     </div>
   );
 
@@ -113,54 +109,60 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-4 ">{navLink}</ul>
         </div>
         <div className="navbar-end">
-        {user?.email ? (
-           <div className="cursor-pointer mr-2">
-             <div className="dropdown dropdown-end ">
-              <label tabIndex={0} className="">
-                <div className="w-10 rounded-full">
-                  {user ? (
-                    <img className="rounded-full cursor-pointer" src={user?.photoURL} alt="" />
-                  ) : (
-                    <div className=" text-4xl">
-                      {" "}
-                      <BsPersonCircle></BsPersonCircle>
-                    </div>
-                  )}
-                </div>
-              </label>
-              <ul
-                tabIndex={0}
-                className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
-              >
-                <li>
-                  <NavLink
-                    to="/profile"
-                    className={({ isActive }) =>
-                      isActive
-                        ? "text-[#E76F51] text-base  font-extrabold border-b-8   "
-                        : " font-bold text-base"
-                    }
-                  >
-                    Profile
-                  </NavLink>
-                </li>
-
-                {user ? (
+          {user?.email ? (
+            <div className="cursor-pointer mr-2">
+              <div className="dropdown dropdown-end ">
+                <label tabIndex={0} className="">
+                  <div className="w-10 rounded-full">
+                    {user ? (
+                      <img
+                        className="rounded-full cursor-pointer"
+                        src={user?.photoURL}
+                        alt=""
+                      />
+                    ) : (
+                      <div className=" text-4xl">
+                        {" "}
+                        <BsPersonCircle></BsPersonCircle>
+                      </div>
+                    )}
+                  </div>
+                </label>
+                <ul
+                  tabIndex={0}
+                  className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+                >
                   <li>
-                    <a>{user?.displayName}</a>
+                    <NavLink
+                      to="/profile"
+                      className={({ isActive }) =>
+                        isActive
+                          ? " text-black bg-white rounded-full py-2 px-4  "
+                          : "bg-[#28844b] text-white rounded-full py-2 px-4 "
+                      }
+                    >
+                      Profile
+                    </NavLink>
                   </li>
-                ) : (
-                  ""
-                )}
-                <li>
-                  {" "}
-                  <button onClick={logOut}>Logout</button>
-                </li>
-              </ul>
+
+                  {user ? (
+                    <li>
+                      <a>{user?.displayName}</a>
+                    </li>
+                  ) : (
+                    ""
+                  )}
+                  <li>
+                    {" "}
+                    <button onClick={logOut}>Logout</button>
+                  </li>
+                </ul>
+              </div>
             </div>
-           </div>
           ) : (
-            <div className=" text-base font-semibold hover:bg-[#9dd51f] hover:text-black bg-[#28844b] text-white  py-2 px-4 rounded-md hover:bg-blue-gray-800 "><Link to={"login"}>Log In</Link></div>
+            <div className=" text-base font-semibold hover:bg-[#9dd51f] hover:text-black bg-[#28844b] text-white  py-2 px-4 rounded-md hover:bg-blue-gray-800 ">
+              <Link to={"login"}>Log In</Link>
+            </div>
           )}
         </div>
       </div>

@@ -41,15 +41,25 @@ fetch('http://localhost:5000/products')
            <Slider brand={brand}></Slider>
         }
       </div>
+      { cardData.length>0?
+      
       <div className=" my-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mx-4">
-        { 
-        cardData ? 
-        cardData?.map((data)=> <ProductsCard key={data.id} data={data}></ProductsCard>)
+       
+       {
+         cardData?.map((data)=> <ProductsCard key={data.id} data={data}></ProductsCard>)
         
-        :
-        <div><h4>No data found</h4></div> 
-        }
+       }
+      
+       
+       
       </div>
+      :
+      <div>
+          <h3 className=" text-4xl text-black text-center  font-bold my-[15vh]">
+            'No Data Found for {name}'
+          </h3>
+        </div>
+      }
 
 
 

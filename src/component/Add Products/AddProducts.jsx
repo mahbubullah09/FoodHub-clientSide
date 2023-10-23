@@ -1,3 +1,6 @@
+import toast from "react-hot-toast";
+import Swal from "sweetalert2";
+
 const AddProducts = () => {
 
 
@@ -17,7 +20,34 @@ const AddProducts = () => {
         event.target.rating.value='';
 		const description = (event.target.description.value);
         event.target.description.value='';
-        console.log(image,product,brand_name,category,rating,price,description);
+
+        const newProducts = {image,product,brand_name,category,rating,price,description}
+        console.log(newProducts);
+
+        //send data to the server
+        fetch('http://localhost:5000/products',{
+            method:'POST',
+            headers:{
+                'content-type':'application/json'
+            },
+            body: JSON.stringify(newProducts)
+        })
+        .then(res => res.json()
+        .then(data =>{
+            console.log(data);
+
+            if(data.insertedId){
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Congaratulations',
+                    text: 'Product added succesfully!',
+                    
+                  })
+            }
+        }))
+
+
+
         
 	};
   return (

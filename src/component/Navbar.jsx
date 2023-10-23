@@ -138,7 +138,7 @@ const Navbar = () => {
                       className={({ isActive }) =>
                         isActive
                           ? " text-black bg-white rounded-full py-2 px-4  "
-                          : "bg-[#28844b] text-white rounded-full py-2 px-4 "
+                          : " "
                       }
                     >
                       Profile

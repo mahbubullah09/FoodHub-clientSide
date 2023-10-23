@@ -48,7 +48,7 @@ const SingleCart = ({ details }) => {
       <section className="container mx-auto p-4 md:p-10 antialiased  ">
         <article className=" shadow-[#28844b]  flex flex-wrap md:flex-nowrap shadow-lg mx-auto max-w-3xl group cursor-pointer transform duration-500 hover:-translate-y-1">
           <img
-            className="w-full max-h-[400px] object-cover md:w-52"
+            className="w-full max-h-[400px] object-cover md:w-80"
             src={image}
             alt=""
           />

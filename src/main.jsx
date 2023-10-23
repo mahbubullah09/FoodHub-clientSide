@@ -13,6 +13,8 @@ import SingUp from './component/registration/SingUp';
 import AuthProvider from './Provider/authProvider';
 import UpdateProduct from './component/Add Products/UpdateProduct';
 import MyCart from './component/myCart/MyCart';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
+import Profile from './component/Home/Profile';
 
 
 
@@ -35,6 +37,12 @@ const router = createBrowserRouter([
         element: <SingUp></SingUp>,
       },
       {
+        path: '/profile',
+        element: <PrivateRoute>
+          <Profile/>
+        </PrivateRoute>
+      },
+      {
         path: '/:name',
         element:<BrandDetails/>,
         loader: () => fetch('/brand.json')
@@ -47,18 +55,24 @@ const router = createBrowserRouter([
       },
       {
         path: '/UpdateProduct/:id',
-        element:<UpdateProduct/>,
+        element:<PrivateRoute>
+          <UpdateProduct/>
+        </PrivateRoute>,
         loader:({params})=> fetch(`http://localhost:5000/products/${params.id}`),
         
         
       },
       {
         path:'/addproduct',
-        element:<AddProducts/>
+        element:<PrivateRoute>
+          <AddProducts/>
+        </PrivateRoute>
       },
       {
         path:'/mycart',
-        element:<MyCart/>,
+        element:<PrivateRoute>
+          <MyCart/>
+        </PrivateRoute>,
         loader: () => fetch(`http://localhost:5000/myCart`)
       },
     ],

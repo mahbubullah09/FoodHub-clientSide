@@ -5,7 +5,7 @@ import SingleCart from "./SingleCart";
 
 const MyCart = () => {
   const { user } = useContext(AuthContext);
-  console.log(user.email);
+
   const email = user?.email;
 
   const DB = useLoaderData();
@@ -26,7 +26,7 @@ const MyCart = () => {
         ))
       ) : (
         <div>
-          <h3 className=" text-4xl text-black text-center  h-[30vh] my-[15vh]">
+          <h3 className=" text-4xl font-bold text-black text-center  h-[30vh] my-[15vh]">
             No Data Found
           </h3>
         </div>

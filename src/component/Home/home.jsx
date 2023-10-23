@@ -1,5 +1,8 @@
 import { useLoaderData } from "react-router-dom";
 import Banner from "./Banner";
+import MeetOurTeam from "./MeetOurTeam";
+import Review from "./Review";
+import FAQ from "./FAQ";
 
 
 const Home = () => {
@@ -7,8 +10,13 @@ const Home = () => {
     console.log(brand);
     return (
         <div className=" max-w-6xl mx-auto">
-            <h3 className="text-slate-600">home</h3>
+            
             <Banner brand={brand}/>
+            <MeetOurTeam/>
+            <Review/>
+            <FAQ/>
+
+
 
         </div>
     );

@@ -12,6 +12,7 @@ import Login from './component/registration/Login';
 import SingUp from './component/registration/SingUp';
 import AuthProvider from './Provider/authProvider';
 import UpdateProduct from './component/Add Products/UpdateProduct';
+import MyCart from './component/myCart/MyCart';
 
 
 
@@ -57,7 +58,8 @@ const router = createBrowserRouter([
       },
       {
         path:'/mycart',
-        element:<h3>My Cart</h3>
+        element:<MyCart/>,
+        loader: () => fetch(`http://localhost:5000/myCart`)
       },
     ],
   },

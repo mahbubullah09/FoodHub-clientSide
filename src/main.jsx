@@ -15,6 +15,7 @@ import UpdateProduct from './component/Add Products/UpdateProduct';
 import MyCart from './component/myCart/MyCart';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import Profile from './component/Home/Profile';
+import ErrorPage from './component/registration/ErrorPage';
 
 
 
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Mainlayout></Mainlayout>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -43,7 +45,7 @@ const router = createBrowserRouter([
         </PrivateRoute>
       },
       {
-        path: '/:name',
+        path: '/brand/:name',
         element:<BrandDetails/>,
         loader: () => fetch('/brand.json')
       },

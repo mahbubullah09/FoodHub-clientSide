@@ -3,14 +3,13 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC1VXNq_TDW9SLyrPSem7JGbG0CQrwrAzw",
-  authDomain: "evefever-cd42d.firebaseapp.com",
-  projectId: "evefever-cd42d",
-  storageBucket: "evefever-cd42d.appspot.com",
-  messagingSenderId: "898448164629",
-  appId: "1:898448164629:web:325b5ed4c210320bc3cb1c"
+  apiKey: "AIzaSyAEJcXyN1M6tVL4PmdZJfFFdPoO3wuUpzs",
+  authDomain: "foodhub-57cf2.firebaseapp.com",
+  projectId: "foodhub-57cf2",
+  storageBucket: "foodhub-57cf2.appspot.com",
+  messagingSenderId: "662970216466",
+  appId: "1:662970216466:web:198b2f31d64dfd78c7a8cb"
 };
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);

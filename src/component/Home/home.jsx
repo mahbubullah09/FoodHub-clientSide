@@ -9,7 +9,7 @@ const Home = () => {
     const brand = useLoaderData();
     console.log(brand);
     return (
-        <div className=" max-w-6xl mx-auto">
+        <div className=" max-w-6xl mx-auto" >
             
             <Banner brand={brand}/>
             <MeetOurTeam/>

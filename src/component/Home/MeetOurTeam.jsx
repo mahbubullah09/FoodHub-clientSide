@@ -20,7 +20,7 @@ const MeetOurTeam = () => {
         <div className="bg-[#313030b3]  pt-8 pb-8 my-10  ">
           
           <div className="grid  md:grid-cols-2  lg:grid-cols-4">
-            <div className="card  ">
+          <div className="card  ">
               <figure className="px-10 pt-10">
                 <img
                   src="https://i.ibb.co/t3F1WHy/mahbub-2.png"
@@ -66,7 +66,7 @@ const MeetOurTeam = () => {
               </figure>
               <div className="card-body items-center text-center">
                 <h2 className="card-title">Abu Taief Siddik</h2>
-                <p>Fruits Expert</p>
+                <p>Beverage Expert</p>
                 <div className="grid grid-flow-col gap-4">
                   <FaFacebook />
                   <FaTwitter />

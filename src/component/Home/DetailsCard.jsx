@@ -58,7 +58,7 @@ const DetailsCard = ({ item }) => {
   console.log(_id);
   return (
     <div>
-      <div className="bg-gray-100 dark:bg-gray-800 py-8">
+      <div className="py-8">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row -mx-4">
             <div className="md:flex-1 px-4">
@@ -76,41 +76,41 @@ const DetailsCard = ({ item }) => {
               </div>
             </div>
             <div className="md:flex-1 px-4">
-              <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">
+              <h2 className="text-2xl font-bold mb-2">
                 {product}
               </h2>
-              <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
+              <p className="0 text-sm mb-4">
                 Brand: {brand_name}
               </p>
 
               <div className="mr-4 mb-4">
-                <span className="font-bold text-gray-700 dark:text-gray-300">
+                <span className="font-bold ">
                   Category:
                 </span>
-                <span className="text-gray-600 dark:text-gray-300">{category}</span>
+                <span className="">{category}</span>
               </div>
               <div className="mr-4 mb-4">
-                <span className="font-bold text-gray-700 dark:text-gray-300">
+                <span className="font-bold ">
                   Rating:
                 </span>
-                <span className="text-gray-600 dark:text-gray-300">
+                <span className="">
                   {rating}
                 </span>
               </div>
 
               <div className="mr-4 mb-4">
-                <span className="font-bold text-gray-700 dark:text-gray-300">
+                <span className="font-bold ">
                   Price:
                 </span>
-                <span className="text-gray-600 dark:text-gray-300">
+                <span className="">
                   {price}
                 </span>
               </div>
 
-              <span className="font-bold text-gray-700 dark:text-gray-300">
+              <span className="font-bold">
                 Product Description:
               </span>
-              <p className="text-gray-600 dark:text-gray-300 text-sm mt-2">
+              <p className=" text-sm mt-2">
                 {description}
               </p>
             </div>

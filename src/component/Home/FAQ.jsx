@@ -7,7 +7,7 @@ const FAQ = () => {
         <div className="left-cont md:w-1/2">
           <div
             tabindex="0"
-            className="my-4 collapse collapse-plus border border-base-300 bg-[#a4f1a8]"
+            className="my-4 text-black collapse collapse-plus border border-base-300 bg-[#a4f1a8]"
           >
             <div className="collapse-title text-xl font-medium">
               How does FoodHub work?
@@ -24,7 +24,7 @@ const FAQ = () => {
           </div>
           <div
             tabindex="0"
-            className="my-4 collapse collapse-plus border border-base-300 bg-[#a4f1a8]"
+            className="my-4 text-black collapse collapse-plus border border-base-300 bg-[#a4f1a8]"
           >
             <div className="collapse-title text-xl font-medium">
               What should I do if there's an issue with my order or delivery?
@@ -42,7 +42,7 @@ const FAQ = () => {
           </div>
           <div
             tabindex="0"
-            className="my-4 collapse collapse-plus border border-base-300 bg-[#a4f1a8]"
+            className="my-4 text-black collapse collapse-plus border border-base-300 bg-[#a4f1a8]"
           >
             <div className="collapse-title text-xl font-medium">
               What is the delivery time for my order?
@@ -59,7 +59,7 @@ const FAQ = () => {
           </div>
           <div
             tabindex="0"
-            className="my-4 collapse collapse-plus border border-base-300 bg-[#a4f1a8]"
+            className="my-4 text-black collapse collapse-plus border border-base-300 bg-[#a4f1a8]"
           >
             <div className="collapse-title text-xl font-medium">
               What payment methods are accepted?

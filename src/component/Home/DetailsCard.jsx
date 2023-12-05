@@ -33,7 +33,7 @@ const DetailsCard = ({ item }) => {
     };
     console.log(newCart);
 
-    fetch("http://localhost:5000/myCart", {
+    fetch("https://food-hub-server-red.vercel.app/myCart", {
       method: "POST",
       headers: {
         "content-type": "application/json",

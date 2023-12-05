@@ -31,7 +31,7 @@ const AddProducts = () => {
     console.log(newProducts);
 
     //send data to the server
-    fetch("http://localhost:5000/products", {
+    fetch("https://food-hub-server-red.vercel.app/products", {
       method: "POST",
       headers: {
         "content-type": "application/json",

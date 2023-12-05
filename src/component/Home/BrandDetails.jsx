@@ -18,7 +18,7 @@ console.log(products);
   console.log(brand);
 
   useEffect(() => {
-fetch('http://localhost:5000/products')
+fetch('https://food-hub-server-red.vercel.app/products')
 .then(res => res.json())
 .then(data => setProducts(data))
 

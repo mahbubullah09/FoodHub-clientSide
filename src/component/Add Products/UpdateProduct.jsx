@@ -37,14 +37,14 @@ const UpdateProduct = () => {
      
 
         //update data
-        fetch(`http://localhost:5000/products/${_id}`,{
+        fetch(`https://food-hub-server-red.vercel.app/products/${_id}`,{
             method:'PUT',
             headers:{
                 'content-type':'application/json'
             },
             body: JSON.stringify(updatedProduct)
         })
-        .then(res => res.json()
+        .then(res => res.json())
         .then(data =>{
             console.log(data);
 
@@ -56,7 +56,7 @@ const UpdateProduct = () => {
                     
                   })
             }
-        }))
+        })
 
 
         

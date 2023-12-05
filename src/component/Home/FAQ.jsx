@@ -3,7 +3,7 @@ import React from "react";
 const FAQ = () => {
   return (
     <div>
-      <div className="faq-cont flex flex-col-reverse gap-8 my-8 lg:flex lg:flex-row justify-between items-center">
+      <div className="faq-cont flex flex-col-reverse gap-8 my-8 lg:flex lg:flex-row justify-between items-center  ">
         <div className="left-cont md:w-1/2">
           <div
             tabindex="0"
